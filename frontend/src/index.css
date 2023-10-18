@@ -118,6 +118,12 @@ h3 {
   margin-bottom: 10px;
 }
 
+.form-group-btn {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 .form-group input,
 .form-group textarea,
 .form-group select {
