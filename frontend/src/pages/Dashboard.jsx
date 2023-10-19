@@ -17,16 +17,17 @@ function Dashboard() {
   useEffect(() => {
     if (!user) {
       navigate('/login');
+    } else {
+      dispatch(getGoals());
     }
     if (isError) {
-      toast.error(message);
+      console.log(message);
     }
-    dispatch(getGoals());
 
     return () => {
       dispatch(reset());
     };
-  }, [user, navigate, isError, message, dispatch]);
+  }, [user, navigate, isError, dispatch, message]);
 
   if (isLoading) {
     return <Spinner />;
